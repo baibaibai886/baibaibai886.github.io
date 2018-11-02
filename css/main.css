@@ -449,7 +449,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .header-inner {
-    width: 900px;
+    width: 1500px;
   }
 }
 .main {
@@ -461,7 +461,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 900px;
+    width: 1500px;
   }
 }
 .footer {
@@ -478,7 +478,7 @@ body {
 }
 @media (min-width: 1600px) {
   .container .footer-inner {
-    width: 900px;
+    width: 1500px;
   }
 }
 pre,
@@ -882,6 +882,10 @@ pre .javascript .function {
   border-top: 3px solid transparent;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
+  border-radius: 1px 1px 0 0;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
 }
 @media (max-width: 413px) {
   .post-body .tabs ul.nav-tabs li.tab {
@@ -890,6 +894,11 @@ pre .javascript .function {
     border-left: 3px solid transparent;
     border-right: 1px solid transparent;
     border-bottom: 1px solid transparent;
+  }
+}
+@media (max-width: 413px) {
+  .post-body .tabs ul.nav-tabs li.tab {
+    border-radius: 1px;
   }
 }
 .post-body .tabs ul.nav-tabs li.tab a {
@@ -929,12 +938,21 @@ pre .javascript .function {
 .post-body .tabs .tab-content .tab-pane {
   border: 1px solid #ddd;
   padding: 20px 20px 0 20px;
+  border-radius: 1px;
 }
 .post-body .tabs .tab-content .tab-pane:not(.active) {
   display: none !important;
 }
 .post-body .tabs .tab-content .tab-pane.active {
   display: block !important;
+}
+.post-body .tabs .tab-content .tab-pane.active:nth-of-type(1) {
+  border-radius: 0 1px 1px 1px;
+}
+@media (max-width: 413px) {
+  .post-body .tabs .tab-content .tab-pane.active:nth-of-type(1) {
+    border-radius: 1px;
+  }
 }
 .btn {
   display: inline-block;
@@ -1226,6 +1244,14 @@ pre .javascript .function {
   .post-body {
     word-break: break-word;
   }
+}
+.post-body p a {
+  color: #0593d3;
+  border-bottom: none;
+}
+.post-body p a:hover {
+  color: #ff106c;
+  text-decoration: underline;
 }
 .post-body .fancybox img {
   display: block !important;
@@ -1742,6 +1768,24 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 1px solid #eee;
+/* add start*/
+  border-radius: 50%;
+  -webkit-transition: 1.4s all;
+  -moz-transition: 1.4s all;
+  -ms-transition: 1.4s all;
+  transition: 1.4s all;
+/* end */
+}
+.site-author-image:hover {
+  background-color: #55dae1;
+  -webkit-transform: rotate(360deg) scale(1.1);
+  -moz-transform: rotate(360deg) scale(1.1);
+  -ms-transform: rotate(360deg) scale(1.1);
+  -webkit-transform: rotate(360deg) scale(1.1);
+  -moz-transform: rotate(360deg) scale(1.1);
+  -ms-transform: rotate(360deg) scale(1.1);
+  -o-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
 }
 .site-author-name {
   margin: 0;
@@ -1823,7 +1867,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff40a6;
+  background: #ff6674;
 }
 .links-of-blogroll {
   font-size: 13px;
